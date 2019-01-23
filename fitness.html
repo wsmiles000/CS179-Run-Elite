@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Information</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body>
+<div data-role="page">
+  <div data-role="header">
+       <h1><a data-ajax="false">RunElite</a></h1>
+  </div>
+  <div data-role="navbar" id="navbar">
+       <ul>
+         <li><a href="/index.html">Map</a></li>
+         <li><a href="/fitness.html">Fitness</a></li>
+         <li><a href="/weather.html">Weather</a></li>
+         <li><a href="/help.html">Help</a></li>
+       </ul>
+  </div>
+
+<div data-role="content">
+  <form id="fitness">
+    <div class="ui-field-contain">
+      <label for="age">Age</label>
+      <input type="text" name="age" id="age" placeholder="" value="">
+    </div>
+
+    <div class="ui-field-contain">
+    <label for="select-choice" class="select">Height</label>
+      <select name="Height" id="height">
+        <option value=" " >Please select your Height</option>
+        <option>4'11"</option>
+        <option>5'0"</option>
+        <option >5'1"</option>
+        <option >5'2"</option>
+        <option >5'3"</option>
+        <option >5'4"</option>
+        <option >5'5"</option>
+        <option >5'6"</option>
+        <option >5'7"</option>
+        <option> 5'8"</option>
+        <option >5'9"</option>
+        <option >5'10"</option>
+        <option >5'11"</option>
+        <option >6'1"</option>
+        <option >6'2"</option>
+        <option >6'3"</option>
+        <option> 6'4"</option>
+        <option >6'5"</option>
+        <option >6'6"</option>
+        <option>6'7"</option>
+        <option >6'8"</option>
+        <option> 6'9"</option>
+        <option >6'10"</option>
+        <option >6'11"</option>
+        <option>7'0"</option>
+        <option>7'1"</option>
+      </select>
+      </div>
+
+
+      <div class="ui-field-contain">
+        <label for="slider-fill">Weight</label>
+<input type="range" name="slider-fill" id="slider-fill" value="120" min="50" max="300" step="1" data-highlight="true">
+      </div>
+
+
+      <div class="ui-field-contain">
+      <label for="select-choice" class="select">Gender</label>
+        <select name="Gender" id="gender">
+          <option value=" ">Please select your Gender</option>
+          <option>M</option>
+          <option>F</option>
+        </select>
+      </div>
+
+      <div class="ui-field-contain">
+        <label for="select-choice" class="select">Mileage</label>
+          <select name="Mileage" id="mileage">
+            <option value=" ">Please select your Mileage per Week</option>
+            <option>3 miles or less</option>
+            <option>3-10 miles</option>
+            <option >10-20 miles</option>
+            <option >20-30 miles</option>
+            <option >30-40</option>
+            <option >40-50</option>
+            <option >50-60</option>
+            <option >60-70</option>
+            <option >70+</option>
+          </select>
+      </div>
+        <div class="ui-field-contain">
+        <a href="#positionSelector" data-transition="pop" class="ui-btn ui-corner-all ui-shadow" data-rel="popup" data-position-to="#position-header">Submit</a>
+        <div data-role="popup" id="positionSelector" class="ui-content" data-theme="b">
+          <p>Submitted! Remember, you can always update your information.</p>
+        </div>
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>

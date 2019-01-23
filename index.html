@@ -1,0 +1,60 @@
+<!-- Much of this framework is from http://stackoverflow.com/questions/13345479/clean-example-of-directions-with-google-maps-in-jquery-mobile -->
+<html>
+  <head>
+    <title>RunElite Map</title>
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- Include the jQuery library -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include the jQuery Mobile library -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGFpaaLEaqur_u2SknK70yCYzxLMlqmh0"></script>
+
+    <script src="https://www.google.com/jsapi"></script>
+    <script>
+    // Load the Visualization API and the columnchart package.
+    google.load('visualization', '1', {packages: ['columnchart']});
+    </script>
+
+    <script src="maps.js"></script>
+</head>
+<body>
+       <div id="basic-map" data-role="page">
+           <div data-role="header">
+               <h1><a data-ajax="false">RunElite</a></h1>
+           </div>
+           <div data-role="navbar" id="navbar">
+                    <ul>
+                     <li><a href="/index.html">Map</a></li>
+                     <li><a href="/fitness.html">Fitness</a></li>
+                     <li><a href="/weather.html">Weather</a></li>
+                     <li><a href="/help.html">Help</a></li>
+                    </ul>
+           </div>
+           <div data-role="content">
+               <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+                   <div id="map_canvas" style="height:350px;"></div>
+               </div>
+               <div data-role="fieldcontain">
+                   <label for="start">Start</label>
+                   <input type="text" name="start" id="start" value=""/>
+               </div>
+               <div data-role="fieldcontain">
+                    <label for="end">Destination</label>
+                    <input type="text" name="end" id="end" value=""/>
+               </div>
+               <a href="#" id="directions-button" data-role="button" data-inline="true" data-mini="true">Get Directions</a>
+               <div data-role="content" id="elevation_chart"></div>
+               <div id="results" style="display:none;">
+                   <div id="directions"></div>
+               </div>
+           </div>
+       </div>
+   </body>
+</html>

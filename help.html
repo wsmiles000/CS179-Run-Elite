@@ -1,0 +1,44 @@
+<!-- Alex Bartlett -->
+
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+	<head>
+		<title>Feedback</title>
+<!-- Include jQuery Mobile stylesheets -->
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- Include the jQuery library -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include the jQuery Mobile library -->
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<div data-role="header">
+				<h1><a data-ajax="false">RunElite</a></h1>
+		</div>
+		<div data-role="navbar" id="navbar">
+						 <ul>
+							 <li><a href="/index.html">Map</a></li>
+							 <li><a href="/fitness.html">Fitness</a></li>
+							 <li><a href="/weather.html">Weather</a></li>
+							 <li><a href="/help.html">Help</a></li>
+						 </ul>
+		</div>
+		<div class="center">
+			<div data-role="content">
+
+				<label for="Feedback">Questions? Concerns? Tell us!</label>
+				<textarea name="feedback" id="feedback"></textarea>
+
+			<div class="ui-field-contain">
+			<a href="#positionSelector" data-transition="pop" class="ui-btn ui-corner-all ui-shadow" data-rel="popup" data-position-to="#position-header">Submit</a>
+			<div data-role="popup" id="positionSelector" class="ui-content" data-theme="b">
+				<p>Thank you for your feedback! We'll be in touch.</p>
+			</div>
+		</div>
+		</div>
+	</div>
+	</body>
+</html>
